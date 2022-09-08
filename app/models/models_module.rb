@@ -5,4 +5,5 @@ module InheritMethods
             find_by_id(id) #implicit self
         end
     end
+    
 end
