@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_08_090254) do
+ActiveRecord::Schema.define(version: 2022_09_08_092556) do
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_boards_on_project_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "favorite"
+    t.string "color"
   end
 
   create_table "tasks", force: :cascade do |t|
