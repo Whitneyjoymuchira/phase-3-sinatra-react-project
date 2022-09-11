@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_08_092556) do
+ActiveRecord::Schema.define(version: 2022_09_10_190115) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -33,8 +33,16 @@ ActiveRecord::Schema.define(version: 2022_09_08_092556) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "text"
-    t.integer "category_id"
+    t.string "name"
+    t.date "due_date"
+    t.text "description"
+    t.string "status"
+    t.string "priority"
+    t.boolean "completed"
+    t.integer "board_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["board_id"], name: "index_tasks_on_board_id"
   end
 
 end

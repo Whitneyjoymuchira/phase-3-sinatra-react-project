@@ -1,5 +1,4 @@
-
-puts " 🌱Clearing old data..."
+puts "Clearing old data..."
 Task.destroy_all
 Board.destroy_all
 
@@ -93,37 +92,6 @@ client3_completed.tasks.build(
 client3_completed.save
 
 
-
-client4_todo.tasks.build(
-    name: 'Homepage Fall 3 WK40',
-    due_date: Date.new(2021,10,1),
-    description: '',
-    status: 'Not Started',
-    priority: 'High',
-    completed: false
-)
-
-client4_todo.tasks.build(
-    name: 'Banner - A21M3 - Up To 25 Off Sweaters Pants FSH 79',
-    due_date: Date.new(2021,10,4),
-    description: 'Global Banner - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nGlobal Disclaimer - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nClothing - Flyout Offer - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nTops - Flyout Offer - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nCoupons - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nDaily Offers - A21M3 - Up To 25 Off Sweaters Pants FSH 79\nHomePage - Banner - A21M3 - Up To 25 Off Sweaters Pants FSH 79',
-    status: 'Not Started',
-    priority: 'Medium',
-    completed: false
-)
-
-client4_todo.tasks.build(
-    name: 'Banner - APPLE - 30 Off FSH 79',
-    due_date: Date.new(2021,10,7),
-    description: 'Global Banner - APPLE - 30 Off FSH 79\nGlobal Disclaimer - APPLE - 30 Off FSH 79\nClothing - Flyout Offer - APPLE - 30 Off FSH 79\nTops - Flyout Offer - APPLE - 30 Off FSH 79\nCoupons - APPLE - 30 Off FSH 79\nDaily Offers - APPLE - 30 Off FSH 79\nHomePage - Banner - APPLE - 30 Off FSH 79',
-    status: 'Not Started',
-    priority: 'High',
-    completed: false
-)
-
-client4_todo.save
-
-
 client1_todo.tasks.build(
     name: 'Banner - Banner - DD994 - 25 Dollars Off 100 FSH 100',
     due_date: Date.new(2021,9,29),
@@ -162,6 +130,5 @@ client1_todo.tasks.build(
 
 client1_todo.save
 
-# Seed your database here
 
-puts "✅ Done seeding!"
+puts "Done Seeding!"
